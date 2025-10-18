@@ -5,6 +5,7 @@ Startup and shutdown event handlers.
 # --- IMPORTS ---
 from fastapi import FastAPI
 from neura_backend import routers
+from neura_backend.app import container
 from neura_backend.app import health
 
 
@@ -15,6 +16,11 @@ def on_startup(app: FastAPI) -> None:
     """
     # Mount routers
     routers.mount(app)
+
+    # Update container
+    container.update({
+
+    })
 
     # Set app health as OK
     health.status = 'OK'
