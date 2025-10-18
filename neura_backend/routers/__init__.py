@@ -4,6 +4,7 @@ HTTP routers.
 
 # --- IMPORTS ---
 from fastapi import FastAPI
+from neura_backend.routers import search
 from neura_backend.routers import system
 
 
@@ -17,3 +18,4 @@ def mount(app: FastAPI) -> None:
     :returns: nothing
     """
     app.include_router(system.router, tags = ['system'])
+    app.include_router(search.router, tags = ['search'])
