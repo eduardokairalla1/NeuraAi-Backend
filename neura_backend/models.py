@@ -16,7 +16,9 @@ class Config(BaseSettings):
     """
     Application configuration.
     """
-    example: str = 'Hello, World!'
+
+    # --- TAVILY CONFIGS ---
+    TAVILY_API_KEY: str
 
     class Config:
         """
