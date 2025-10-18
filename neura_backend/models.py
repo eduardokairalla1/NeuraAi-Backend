@@ -16,6 +16,8 @@ class Config(BaseSettings):
     """
     Application configuration.
     """
+    # --- APP CONFIGS ---
+    USER_MESSAGE_LENGTH_LIMIT: int = 1500
 
     # --- AI CONFIGS ---
     OPENAI_API_KEY: str
