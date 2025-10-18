@@ -1,0 +1,3 @@
+"""
+Neura_backend exceptions.
+"""
