@@ -26,6 +26,10 @@ class Config(BaseSettings):
     # --- TAVILY CONFIGS ---
     TAVILY_API_KEY: str
 
+    # --- SEARCH CONFIGS ---
+    MAX_URL_SEARCH_PER_QUERY: int = 3
+    MAX_CHARS_PER_CONTENT_SEARCH: int = 50000
+
     class Config:
         """
         Pydantic settings configuration.
