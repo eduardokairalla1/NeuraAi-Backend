@@ -17,6 +17,12 @@ class Config(BaseSettings):
     Application configuration.
     """
 
+    # --- AI CONFIGS ---
+    OPENAI_API_KEY: str
+    OPENAI_PLANNER_MODEL: str
+    OPENAI_SEARCHER_MODEL: str
+    OPENAI_WRITER_MODEL: str
+
     # --- TAVILY CONFIGS ---
     TAVILY_API_KEY: str
 
