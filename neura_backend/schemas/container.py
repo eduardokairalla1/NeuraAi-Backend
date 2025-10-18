@@ -4,6 +4,7 @@ Container (dependency injection) Schema.
 
 # --- IMPORTS ---
 from neura_backend.models import Config
+from tavily import AsyncTavilyClient
 
 
 # --- TYPES ---
@@ -16,3 +17,4 @@ class Container(TypedDict):
     Structure for global application resources.
     """
     config: Config
+    tavily_client: AsyncTavilyClient
