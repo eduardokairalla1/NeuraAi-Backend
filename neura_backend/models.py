@@ -16,7 +16,19 @@ class Config(BaseSettings):
     """
     Application configuration.
     """
-    example: str = 'Hello, World!'
+
+    # --- AI CONFIGS ---
+    OPENAI_API_KEY: str
+    OPENAI_PLANNER_MODEL: str
+    OPENAI_SEARCHER_MODEL: str
+    OPENAI_WRITER_MODEL: str
+
+    # --- TAVILY CONFIGS ---
+    TAVILY_API_KEY: str
+
+    # --- SEARCH CONFIGS ---
+    MAX_URL_SEARCH_PER_QUERY: int = 3
+    MAX_CHARS_PER_CONTENT_SEARCH: int = 50000
 
     class Config:
         """

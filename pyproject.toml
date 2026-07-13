@@ -1,17 +1,22 @@
 [tool.poetry]
 name = "neura_backend"
-version = "0.0.1"
+version = "0.1.0"
 description = "This is Neura AI service"
 authors = ["Eduardo Kairalla"]
 packages = [{include = "neura_backend"}]
 include = ["pyproject.lock"]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<4.0"
+python = ">=3.10,<4.0"
 fastapi = "^0.116.1"
 pydantic = "^2.7.3"
 pydantic-settings = "^2.10.1"
 uvicorn = "^0.35.0"
+tavily-python = "^0.7.12"
+langchain = "^1.0.0"
+langchain-openai = "^1.0.0"
+langchain-core = "^1.0.0"
+langgraph = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.7"

@@ -7,6 +7,7 @@ from fastapi import FastAPI
 from neura_backend.models import Config
 from neura_backend.models import Health
 from neura_backend.models import Info
+from neura_backend.schemas.container import Container
 
 
 # --- CODE ---
@@ -29,3 +30,8 @@ info = Info(
 
 # System health
 health = Health()
+
+# Dependency injection
+container: Container = {
+    'config': config,
+}
